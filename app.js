@@ -11,7 +11,7 @@ app.use(express.static(path.resolve(__dirname, "public")));
 
 app.engine("hbs", hbs({
   extname:    "hbs",
-  layout:     "layout",
+  defaultLayout:     "layout",
   layoutDir:  path.resolve(__dirname, "/views/layouts/")
 }));
 app.set("views", path.resolve(__dirname, "views"));
@@ -46,7 +46,7 @@ app.get(/^\/(\d{5})$/, (req, res, next) => {
 });
 
 app.use((req, res) => {
-  res.status(404).send("404");
+  res.status(404).render("404");
 });
 
 app.listen(3000);
