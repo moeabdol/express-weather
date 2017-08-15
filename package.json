@@ -6,6 +6,9 @@
   "repository": "https://github.com/moeabdol/express-weather",
   "author": "moeabdol <mohd.a.saed@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.15.4",
