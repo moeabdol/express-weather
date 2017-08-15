@@ -10,9 +10,9 @@ const weather = new ForecastIo("43bb775544f6dac0688e4a96558c07fb");
 app.use(express.static(path.resolve(__dirname, "public")));
 
 app.engine("hbs", hbs({
-  extname:    "hbs",
-  defaultLayout:     "layout",
-  layoutDir:  path.resolve(__dirname, "/views/layouts/")
+  extname:        "hbs",
+  defaultLayout:  "layout",
+  layoutDir:      path.resolve(__dirname, "/views/layouts/")
 }));
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "hbs");
